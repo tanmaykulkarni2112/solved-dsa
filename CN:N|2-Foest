@@ -1,0 +1,29 @@
+void nForest(int n) {
+  for (int i = 1; i < n+1; i++) {
+	  int flag=0;
+	  while(flag<i){
+      cout<<"* ";
+      flag++;}
+	    cout<<endl;
+    }
+}
+
+//complete code
+/* #include<iostream>
+using namespace std;
+
+void nForest(int n) {
+  for (int i = 1; i < n+1; i++) {
+	  int flag=0;
+	  while(flag<i){
+      cout<<"* ";
+      flag++;}
+      cout<<endl;
+  }
+}
+
+int main(){
+    nForest(3);
+    return 0;
+}
+*/
