@@ -1,0 +1,42 @@
+//code for website
+#include <iostream>
+using namespace std;
+
+void nForest(int n) {
+    
+    int i=0;
+	while(i<n){int j=0;
+	    while(j<n){
+	        cout<<"* ";
+	        j++;
+	    }
+	cout<<endl;
+	i++;    
+	}
+}
+
+
+//COMPLETE CODE
+/*
+#include <iostream>
+using namespace std;
+
+void nForest(int n) {
+  int i=0;
+	while(i<n){
+      int j=0;
+	    while(j<n){
+	        cout<<"*";
+	        j++;
+	    }
+	cout<<endl;
+	i++;    
+	}
+}
+
+int main()
+{
+    nForest(3);
+    return 0;
+}
+*/
