@@ -1,0 +1,11 @@
+int reverse(int x) {
+        int reversed = 0;
+        while (x != 0) { // when only one digit is remaining after the execution of last digit, loop will end
+            int digit = x % 10; //extracting the last digit of the number  
+            reversed = reversed * 10 + digit; // most imp logic
+            x /= 10; //move to left 
+        }
+
+        return reversed;
+    }
+};
