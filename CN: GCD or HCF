@@ -13,3 +13,37 @@ int calcGCD(int n, int m){
     }
 return ans;
 }
+
+
+//better time complexity can be obtained using Euclidean algorithm :o
+/*
+#include <iostream>
+using namespace std;
+
+// Function to calculate the greatest common divisor (gcd) using Euclidean algorithm
+int calcGCD(int n, int m) {
+    while (n != 0) {
+        // Temporary variable to store the value of n
+        int temp = n;
+        
+        // Update n to the remainder of m divided by n
+        n = m % n;
+        
+        // Update m to the original value of n
+        m = temp;
+    }
+
+    // The final value of m is the gcd of the original two numbers
+    return m;
+}
+
+int main() {
+    // Example input values
+    int n = 6, m = 4;
+
+    // Output the calculated gcd
+    cout << calcGCD(n, m);
+
+    return 0;
+}
+*/
