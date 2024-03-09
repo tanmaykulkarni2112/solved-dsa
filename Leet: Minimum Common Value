@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int ans = -1;
+//prefer variables outside the function if it suits the logic 
+
+    int getCommon(vector<int>& nums1, vector<int>& nums2) {
+        int first = 0;
+        int second = 0;
+
+        while (first < nums1.size() && second < nums2.size()) {
+            if (nums1[first] == nums2[second]) {
+                ans = nums1[first];
+                break;
+            }
+
+            if (nums1[first] < nums2[second])
+                first++;
+            else
+                second++;
+        }
+
+        if (ans == -1)
+            return -1;
+
+        return ans;
+    }
+};
