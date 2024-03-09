@@ -1,0 +1,19 @@
+bool checkArmstrong(int n){
+    int stk[20];
+    int num = n;
+    int count = 0;
+
+    while (num > 0) {
+        stk[count++] = num % 10;
+        num /= 10;
+    }
+
+    int size = count;
+    int sum = 0;
+
+    for (int i = 0; i < size; ++i) {
+        sum += pow(stk[i], size);
+    }
+
+    return (sum == n);
+}
