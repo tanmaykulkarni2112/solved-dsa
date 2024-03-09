@@ -1,0 +1,15 @@
+int calcGCD(int n, int m){
+    int ans=-1;
+    int max;
+    if(n>=m){
+        max=n;
+    }
+    else max=m;
+
+    for (int i = 1; i <= max; i++) { //note for future. Prefer 1 indexing, 0 indexing is causing silly error.
+        if (n % i == 0 && m % i == 0) {
+            ans=i;
+        }
+    }
+return ans;
+}
