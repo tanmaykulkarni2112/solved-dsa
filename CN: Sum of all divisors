@@ -1,0 +1,36 @@
+/*
+CODE EXCEEDING THE TIME CONSTRAINT
+
+int sumOfAllDivisors(int n) {
+  if (n > 4*pow(10,4)) {
+  return 0;
+  }
+    int sum = 0;
+    for (int i = 1; i <= n; ++i) {
+        int ans = 0;
+        for (int j = 1; j <= i; ++j) {
+            if (i % j == 0) {
+                ans += j;
+            }
+        }
+        sum += ans;
+    }
+    return sum;
+}
+*/
+
+
+int sumOfAllDivisors(int n){
+	int sqrt = 1;
+	while (sqrt*sqrt<=n) {
+		sqrt++;
+	}
+	sqrt--;
+
+	int total = 0;
+	int sqrt_sum = sqrt * (sqrt+1)/2;
+	for (int i=1; i<=sqrt; i++) {
+		total += i * (n/i) + n/i * (n/i + 1)/2 - sqrt_sum;
+	}
+	return total;
+}
