@@ -1,0 +1,12 @@
+vector<int> printNos(int x) {
+    if (x == 1) {
+        return {1};
+    }
+    
+    vector<int> result = printNos(x - 1);
+
+    //same logic but the data will not be  stored as stack.
+    result.insert(result.begin(), x);
+    
+    return result;
+}
