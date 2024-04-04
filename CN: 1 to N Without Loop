@@ -1,0 +1,11 @@
+//read print n times before this to revise logic of recursion and vector together
+
+
+vector<int> printNos(int x) {
+ if (x == 1) {
+        return {1};
+    }
+    vector<int> result = printNos(x - 1);    
+    result.push_back(x);
+    return result;
+}
