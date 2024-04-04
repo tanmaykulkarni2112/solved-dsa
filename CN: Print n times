@@ -1,0 +1,19 @@
+vector<string> printNTimes(int n) {
+
+	// always create a vectir 
+    vector<string> result;
+
+//this uses stack so go to 0, like reversing 
+    if (n <= 0) {
+        return result;//ps after this statement, the conditions in the stack will be popped one by one
+    }
+    
+	//store the recursive ccalling in the vector 
+    result = printNTimes(n - 1);
+    
+
+	//push on the stack
+    result.push_back("Coding Ninjas");
+    
+    return result; // always return without forgetting, read the question proper;ly
+}
