@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> result;
+
+        int size = nums.size(); //sizeof() cannot be used in the vectors!
+        for(int i = 0; i < size - 1; i++) {
+            for(int j = i + 1; j < size; j++) {
+                if(nums[i] + nums[j] == target) {
+                    result.push_back(i);
+                    result.push_back(j);
+                    return result; // Return index as soon as fond
+// dont return 0 or some integer. look at the vector you want to return.
+                }
+            }
+        }    
+
+        return result; // Return empty vector if no solution found
+    }
+};
