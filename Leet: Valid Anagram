@@ -1,0 +1,25 @@
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        if (s.length() != t.length())
+            return false;
+
+        array<int, 26> arr1;
+        array<int, 26> arr2;
+//eg-> for i in 'string1'
+        for (char ch : s) {
+            arr1[ch - 'a']++;
+        }
+        for (char ch : t) {
+            arr2[ch - 'a']++;
+        }
+
+        for (int i = 0; i < 26; i++) {
+            if (arr1[i] != arr2[i]) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+};
